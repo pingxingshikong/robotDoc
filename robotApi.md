@@ -276,6 +276,7 @@ msgType消息类型
 ```
 {
 	"robotId":"wxid_lgxmu46zpkhs12",
+	"chatId":"19061446947@chatroom",
 	"noticeId":"CoinPriceGet",
 	"message":"text"
 }
@@ -284,6 +285,7 @@ msgType消息类型
 |字段名称       |字段说明         |类型            |必填            |备注     |
 | -------------|:--------------:|:--------------:|:--------------:| ------:|
 |robotId|机器微信ID|string|Y|         |
+|chatId|群聊/好友ID|string|N|  为空时则发送所有群聊       |
 |noticeId|自定义消息ID|string|Y|         |
 |message|消息|string|Y |         |
 
@@ -320,6 +322,7 @@ msgType消息类型
 ```
 {
 	"robotId":"wxid_lgxmu46zpkhs12",
+	"chatId":"19061446947@chatroom",
 	"noticeId":"CoinPriceGet",
 	"pictureUrlList":["https://s2.51cto.com/images/100/blog/index/logonew5.png"]
 }
@@ -328,6 +331,7 @@ msgType消息类型
 |字段名称       |字段说明         |类型            |必填            |备注     |
 | -------------|:--------------:|:--------------:|:--------------:| ------:|
 |robotId|机器微信ID|string|Y|         |
+|chatId|群聊/好友ID|string|N|  为空时则发送所有群聊       |
 |noticeId|自定义消息ID|string|Y|         |
 |pictureUrlList|图片url列表|string[]|Y |         |
 
