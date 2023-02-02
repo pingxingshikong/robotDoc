@@ -4,6 +4,67 @@
 >http://coin.i1314i.com
 
 
+#### 消息订阅
+
+2) 调用方式：POST
+
+>headers
+
+|字段名称       |字段说明         |类型            |必填            |备注     |
+| -------------|:--------------:|:--------------:|:--------------:| ------:|
+|robot-token|鉴权令牌|string|Y|         |
+
+
+>订阅到的数据
+> 
+```
+{
+    "finalFromName":"山山而川",
+    "finalFromWxid":"wxid_es7stpo47c5n21",
+    "fromName":"搞钱-主",
+    "fromWxid":"19061446947@chatroom",
+    "msg":"1",
+    "msgId":0,
+    "msgTime":1675319663,
+    "msgType":1,
+    "requestId":14288,
+    "robotWxid":"wxid_lgxmu46zpkhs12",
+    "type":200
+}
+```
+
+|字段名称       |字段说明         |类型            |必填            |备注     |
+| -------------|:--------------:|:--------------:|:--------------:| ------:|
+|finalFromName|消息发送人|string|Y|         |
+|finalFromWxid|消息发送人ID|string|Y|         |
+|fromName|消息所属群聊/好友名称|string|Y |         |
+|fromWxid|消息所属群聊/好友名称|string|Y |         |
+|msg|消息内容|string|Y |         |
+|msgId|消息ID|int|Y |         |
+|msgTime|消息时间|long|Y |         |
+|msgType|消息类型|string|Y | 见下表格     |
+|requestId|请求ID|long|Y |         |
+|robotWxid|机器人ID|string|Y |         |
+|type|状态|200|Y |         |
+
+msgType消息类型
+
+|类型ID      |字段说明         |
+| -------------|:--------------:|
+|1|文本消息|
+|3|图片消息|
+|34|语音消息|
+|42|名片消息|
+|43|视频|
+|47|动态表情|
+|48|地理位置|
+|49|分享链接|
+|2001|红包|
+|2002|小程序|
+|2003|群邀请|
+
+
+
 #### 获取群聊列表
 
 >/api/wechat/chatroomList
